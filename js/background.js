@@ -4,7 +4,7 @@ chrome.extension.onMessage.addListener((request, sender, sendResponse) => {
   switch (request.action) {
     case "startAction":
       sendResponse({ received: "success" });
-      injectScript();
+      startAction();
       break;
     case "successToJoin":
       sendResponse({ received: "success" });
@@ -13,7 +13,7 @@ chrome.extension.onMessage.addListener((request, sender, sendResponse) => {
       break;
     case "groupFull":
       sendResponse({ received: "success" });
-      chrome.alarms.create("startAction", { delayInMinutes: 0.1 }); //TODO:
+      chrome.alarms.create("startAction", { delayInMinutes: 15 });
       break;
     case "alreadyJoined":
       sendResponse({ received: "success" });
@@ -27,24 +27,33 @@ chrome.extension.onMessage.addListener((request, sender, sendResponse) => {
   chrome.alarms.onAlarm.addListener((alarm) => {
     console.log("alarm", alarm);
     if (alarm === "startAction") {
-      injectScript();
+      startAction();
     }
   });
 });
 
 //actions
-const injectScript = async () => {
+const startAction = async () => {
+  const url = await getFromLocal("URLGroup");
   const id = await hasTab;
-  if (id) updateTabEndExact(id);
-  else createTabEndExact();
+  if (id) updateTabEndExact(id, url);
+  else createTabEndExact(url);
 };
-const createTabEndExact = () => {
+
+const createTabEndExact = (url) => {
   chrome.tabs.create({ url, active: false }, (tab) => {
     exact(tab.id);
   });
 };
 
-const updateTabEndExact = async (tabId) => {
+const getFromLocal = async (key) =>
+  new Promise(function (resolve, reject) {
+    chrome.storage.sync.get([key], function (options) {
+      resolve(options[key]);
+    });
+  });
+
+const updateTabEndExact = async (tabId, url) => {
   const res = await ensureSendMessage(tabId, "checkIsUserWriting");
   if (!res.isWrite) {
     chrome.tabs.update(tabId, { url, active: false }, (tab) => {
@@ -71,11 +80,6 @@ const hasTab = new Promise((resolve) => {
   });
 });
 
-// "https://chat.whatsapp.com/BCr1VYo6dnREoY5ohs3UgJ"
-// const url = "https://chat.whatsapp.com/CbhfW7KWFBiJKqaGbEKptY"; //full
-const url = "https://chat.whatsapp.com/JYOs0EohqM1LNmtcnTMTfn"; //new full
-// const url = "https://chat.whatsapp.com/KHguvidFlNKA40tTMjzzbP";
-
 //utilities
 const sendNotificationSuccess = () => {
   chrome.notifications.create("successToJoin", {
@@ -97,16 +101,20 @@ const ensureSendMessage = (tabId, message) =>
       } else {
         // No listener on the other end
         console.log("executeScript again");
-        chrome.tabs.executeScript(tabId, { file: "js/contact-script.js" }, () => {
-          if (chrome.runtime.lastError) {
-            console.error(chrome.runtime.lastError);
-            throw Error(`Unable to inject script into tab ${tabId}`);
+        chrome.tabs.executeScript(
+          tabId,
+          { file: "js/contact-script.js" },
+          () => {
+            if (chrome.runtime.lastError) {
+              console.error(chrome.runtime.lastError);
+              // throw Error(`Unable to inject script into tab ${tabId}`);
+            }
+            // OK, now it's injected and ready
+            chrome.tabs.sendMessage(tabId, { action: message }, (response) => {
+              resolve(response);
+            });
           }
-          // OK, now it's injected and ready
-          chrome.tabs.sendMessage(tabId, { action: message }, (response) => {
-            resolve(response);
-          });
-        });
+        );
       }
     });
   });

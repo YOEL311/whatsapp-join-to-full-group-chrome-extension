@@ -10,14 +10,10 @@ button.addEventListener("click", () => {
   } else if (!URLGroup.startsWith("https://chat.whatsapp.com")) {
     console.log("no valid");
     validation.innerHTML = "URL not valid";
+  } else {
+    chrome.storage.sync.set({ URLGroup });
+    chrome.extension.sendMessage({ action: "startAction" }, (response) => {
+      const success = response.received;
+    });
   }
-  // else if
-
-  chrome.extension.sendMessage({ action: "startAction" }, (response) => {
-    const success = response.received;
-    console.log("startAction", success);
-  });
-
-  chrome.storage.sync.set({ URLGroup });
-  // chrome.storage.sync.set({  });
 });

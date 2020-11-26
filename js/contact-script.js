@@ -72,7 +72,7 @@ const clickOnElement = async (MyElement) => {
   const MyEvent = document.createEvent("MouseEvents");
   // prettier-ignore
   MyEvent.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
-  MyElement.dispatchEvent(MyEvent);
+  MyElement?.dispatchEvent(MyEvent);
 };
 
 const awaitToElement = async (selector) => {
