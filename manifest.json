@@ -1,0 +1,36 @@
+{
+    "manifest_version": 2,
+    "name": "WhatsApp Group Snooze Registration",
+    "description": "Try again and again to sign up for a full group until a space becomes available",
+    "version": "1.0",
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "alarms",
+        "tabs",
+        "activeTab",
+        "storage",
+        "activeTab",
+        "notifications",
+        "https://chat.whatsapp.com/*",
+        "https://web.whatsapp.com/*"
+    ],
+    "background": {
+        "scripts": [
+            "js/background.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://chat.whatsapp.com/*"
+            ],
+            "js": [
+                "js/contact-script.js"
+            ],
+            "all_frames": true
+        }
+    ]
+}
