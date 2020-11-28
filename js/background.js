@@ -1,6 +1,5 @@
 //listeners
 chrome.extension.onMessage.addListener((request, sender, sendResponse) => {
-  console.log("request background", request.action);
   switch (request.action) {
     case "startAction":
       sendResponse({ received: "success" });
@@ -19,13 +18,9 @@ chrome.extension.onMessage.addListener((request, sender, sendResponse) => {
       sendResponse({ received: "success" });
       chrome.alarms.clear("start");
       break;
-    default:
-      console.log("default");
-      break;
   }
 
   chrome.alarms.onAlarm.addListener((alarm) => {
-    console.log("alarm", alarm);
     if (alarm === "startAction") {
       startAction();
     }
@@ -46,7 +41,7 @@ const createTabEndExact = (url) => {
   });
 };
 
-const getFromLocal = async (key) =>
+const getFromLocal = (key) =>
   new Promise(function (resolve, reject) {
     chrome.storage.sync.get([key], function (options) {
       resolve(options[key]);
@@ -100,14 +95,12 @@ const ensureSendMessage = (tabId, message) =>
         });
       } else {
         // No listener on the other end
-        console.log("executeScript again");
         chrome.tabs.executeScript(
           tabId,
           { file: "js/contact-script.js" },
           () => {
             if (chrome.runtime.lastError) {
-              console.error(chrome.runtime.lastError);
-              // throw Error(`Unable to inject script into tab ${tabId}`);
+              throw Error(`Unable to inject script into tab ${tabId}`);
             }
             // OK, now it's injected and ready
             chrome.tabs.sendMessage(tabId, { action: message }, (response) => {

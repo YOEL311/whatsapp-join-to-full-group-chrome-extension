@@ -1,5 +1,4 @@
 chrome.extension.onMessage.addListener((request, sender, sendResponse) => {
-  console.log("request contact file", request);
   if (request.ping) {
     sendResponse({ pong: true });
   }
@@ -85,7 +84,7 @@ const awaitToElement = async (selector) => {
   }
 };
 
-const sleep = async (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const querySelectorButtonWhatsapp =
   "[data-animate-modal-body=true] div [role='button']";

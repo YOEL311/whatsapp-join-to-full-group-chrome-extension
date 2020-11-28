@@ -8,7 +8,6 @@ button.addEventListener("click", () => {
   if (!URLGroup) {
     validation.innerHTML = "pleases enter url for group";
   } else if (!URLGroup.startsWith("https://chat.whatsapp.com")) {
-    console.log("no valid");
     validation.innerHTML = "URL not valid";
   } else {
     chrome.storage.sync.set({ URLGroup });
