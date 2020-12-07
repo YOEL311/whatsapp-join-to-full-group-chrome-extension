@@ -21,16 +21,13 @@ const openGroupLink = async (sendResponse) => {
   await clickOnElement(document.querySelector("[href*=accept]"), "click");
   sendResponse({ received: "success" });
 
-  const querySelector = () =>
-    document.querySelectorAll(querySelectorButtonWhatsapp)[1];
-
-  const element = await awaitToElement(querySelector);
+  const element = await awaitToElement(querySelectorBtn);
   clickOnElement(element);
 };
 
 const tryToJoin = async () => {
-  const querySelector = () =>
-    document.querySelectorAll(querySelectorButtonWhatsapp)[1];
+  const querySelector = buttonToJoinSelector;
+
   const buttonJoin = await awaitToElement(querySelector);
 
   if (!buttonJoin) {
@@ -39,20 +36,13 @@ const tryToJoin = async () => {
   }
 
   clickOnElement(buttonJoin);
-
-  const massageBoxSelector = () =>
-    document.querySelectorAll("[contenteditable='true']")[1];
-
-  const massageBox = await awaitToElement(massageBoxSelector);
-
+  const massageBox = await awaitToElement(messageBoxSelector);
   if (massageBox) {
     sendMassage("successToJoin");
     return;
   }
 
-  const finishButtonSelector = document.querySelector(
-    querySelectorButtonWhatsapp
-  );
+  const finishButtonSelector = document.querySelector(querySelectorBtn);
 
   if (finishButtonSelector) {
     sendMassage("groupFull");
@@ -62,7 +52,8 @@ const tryToJoin = async () => {
 };
 
 const checkIsUserWriting = (sendResponse) => {
-  const messageBox = document.querySelectorAll("[contenteditable='true']")[1];
+  const messageBox = document.querySelector(messageBoxSelector);
+
   if (messageBox?.innerHTML) sendResponse({ isWrite: true });
   else sendResponse({ isWrite: false });
 };
@@ -75,19 +66,21 @@ const clickOnElement = async (MyElement) => {
 };
 
 const awaitToElement = async (selector) => {
-  for (let i = 0; i < 10; i++) {
-    const element = selector();
+  for (let i = 0; i < 5; i++) {
+    const element = document.querySelector(selector);
     if (element) {
       return element;
     }
-    await sleep(500);
+    await sleep(100);
   }
 };
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-const querySelectorButtonWhatsapp =
-  "[data-animate-modal-body=true] div [role='button']";
+const buttonToJoinSelector =
+  "[data-animate-modal-body=true] div[role='button']:nth-child(2)";
+const messageBoxSelector = "[contenteditable='true'][spellcheck='true']";
+const querySelectorBtn = "[data-animate-modal-body=true] div [role='button']";
 
 const sendMassage = (massage) => {
   chrome.extension.sendMessage({ action: massage });
