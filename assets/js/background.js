@@ -3,6 +3,7 @@ chrome.extension.onMessage.addListener((request, sender, sendResponse) => {
   switch (request.action) {
     case "startAction":
       sendResponse({ received: "success" });
+      chrome.alarms.clear("startAction");
       startAction();
       break;
     case "successToJoin":
@@ -10,25 +11,28 @@ chrome.extension.onMessage.addListener((request, sender, sendResponse) => {
       chrome.alarms.clear("start");
       sendNotificationSuccess();
       break;
-    case "groupFull":
+    case "groupFull": {
       sendResponse({ received: "success" });
-      chrome.alarms.create("startAction", { delayInMinutes: 15 });
+      console.log("full send alarm");
+      chrome.alarms.create("startAction", { delayInMinutes: 0.3 });
       break;
+    }
     case "alreadyJoined":
       sendResponse({ received: "success" });
-      chrome.alarms.clear("start");
+      chrome.alarms.clear("startAction");
       break;
   }
+});
 
-  chrome.alarms.onAlarm.addListener((alarm) => {
-    if (alarm === "startAction") {
-      startAction();
-    }
-  });
+chrome.alarms.onAlarm.addListener((alarm) => {
+  if (alarm.name === "startAction") {
+    startAction();
+  }
 });
 
 //actions
 const startAction = async () => {
+  console.log("start start");
   const url = await getFromLocal("URLGroup");
   const id = await hasTab;
   if (id) updateTabEndExact(id, url);
@@ -61,7 +65,7 @@ const updateTabEndExact = async (tabId, url) => {
 
 const exact = (tabId) => {
   setTimeout(() => ensureSendMessage(tabId, "openGroupLink"), 2000);
-  setTimeout(() => ensureSendMessage(tabId, "tryToJoin"), 6000);
+  setTimeout(() => ensureSendMessage(tabId, "tryToJoin"), 8000);
 };
 
 const hasTab = new Promise((resolve) => {
@@ -79,7 +83,7 @@ const hasTab = new Promise((resolve) => {
 const sendNotificationSuccess = () => {
   chrome.notifications.create("successToJoin", {
     type: "basic",
-    iconUrl: "images/icon.png",
+    iconUrl: "assets/js/icons/icon.png",
     title: "success to join",
     message: "You have successfully joined the group!",
   });
@@ -97,7 +101,7 @@ const ensureSendMessage = (tabId, message) =>
         // No listener on the other end
         chrome.tabs.executeScript(
           tabId,
-          { file: "js/contact-script.js" },
+          { file: "assets/js/contact-script.js" },
           () => {
             if (chrome.runtime.lastError) {
               throw Error(`Unable to inject script into tab ${tabId}`);

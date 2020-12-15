@@ -18,7 +18,7 @@
     ],
     "background": {
         "scripts": [
-            "js/background.js"
+            "assets/js/background.js"
         ],
         "persistent": false
     },
@@ -28,7 +28,7 @@
                 "https://chat.whatsapp.com/*"
             ],
             "js": [
-                "js/contact-script.js"
+                "assets/js/contact-script.js"
             ],
             "all_frames": true
         }

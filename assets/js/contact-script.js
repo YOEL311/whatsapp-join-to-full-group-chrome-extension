@@ -26,10 +26,8 @@ const openGroupLink = async (sendResponse) => {
 };
 
 const tryToJoin = async () => {
-  const querySelector = buttonToJoinSelector;
-
-  const buttonJoin = await awaitToElement(querySelector);
-
+  const buttonJoin = await awaitToElement(buttonToJoinSelector);
+  
   if (!buttonJoin) {
     sendMassage("alreadyJoined");
     return;
@@ -41,7 +39,6 @@ const tryToJoin = async () => {
     sendMassage("successToJoin");
     return;
   }
-
   const finishButtonSelector = document.querySelector(querySelectorBtn);
 
   if (finishButtonSelector) {
@@ -49,13 +46,17 @@ const tryToJoin = async () => {
     clickOnElement(finishButtonSelector);
     return;
   }
+
+  // const massageBox = await awaitToElement(messageBoxSelector);
+  // if (massageBox) {
+  //   sendMassage("successToJoin");
+  //   return;
+  // }
 };
 
 const checkIsUserWriting = (sendResponse) => {
   const messageBox = document.querySelector(messageBoxSelector);
-
-  if (messageBox?.innerHTML) sendResponse({ isWrite: true });
-  else sendResponse({ isWrite: false });
+  sendResponse({ isWrite: !!messageBox?.innerHTML });
 };
 
 const clickOnElement = async (MyElement) => {
@@ -66,12 +67,12 @@ const clickOnElement = async (MyElement) => {
 };
 
 const awaitToElement = async (selector) => {
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 10; i++) {
     const element = document.querySelector(selector);
     if (element) {
       return element;
     }
-    await sleep(100);
+    await sleep(120);
   }
 };
 
