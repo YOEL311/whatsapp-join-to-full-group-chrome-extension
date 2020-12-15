@@ -59,7 +59,10 @@ If you have questions or need help integrating the product, [contact me](https:/
 
 
 
-<img src="https://www.codewars.com/users/YOEL311/badges/micro" alt="enter image description here"></a>
+<a href="https://www.codewars.com/users/YOEL311">
+  <img src="https://www.codewars.com/users/YOEL311/badges/micro" alt="enter image description here"></a>
+</a>
 
 Dev: <https://dev.to/yoel>
+
 Whatsapp: <https://api.whatsapp.com/send?phone=972548475559>
