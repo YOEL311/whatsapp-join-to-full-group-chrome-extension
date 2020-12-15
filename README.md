@@ -46,7 +46,7 @@ WhatsApp-Group-Snooze-Registration/
 ```
 
 ## Article
-If you need a thorough explanation about the project you can visit and review [this article](https://medium.com/@akashpawara/how-to-build-a-chrome-extension-to-spam-on-whatsapp-using-vanilla-javascript-1c00faa6a2f7).
+If you need a thorough explanation about the project you can visit and review [this article]
 
 
 ## Technical Support or Questions
@@ -64,5 +64,7 @@ If you have questions or need help integrating the product, [contact me](https:/
 </a>
 
 Dev: <https://dev.to/yoel>
+
+Medium: <https://medium.com/@yoel301>
 
 Whatsapp: <https://api.whatsapp.com/send?phone=972548475559>
