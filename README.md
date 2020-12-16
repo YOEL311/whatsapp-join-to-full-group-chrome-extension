@@ -57,16 +57,16 @@ If you have questions or need help integrating the product, [contact me](https:/
 
 ## Social Media
 
-
-
-<a href="https://www.codewars.com/users/YOEL311">
-  <img src="https://www.codewars.com/users/YOEL311/badges/micro" alt="enter image description here"></a>
-</a>
-
 Dev: <https://dev.to/yoel>
 
 Medium: <https://medium.com/@yoel301>
 
-StackOverFlow: <https://stackoverflow.com/users/9161478>
-
 Whatsapp: <https://api.whatsapp.com/send?phone=972548475559>
+
+## My reputation
+
+<a href="https://stackoverflow.com/users/9161478/yoel"><img src="https://stackoverflow.com/users/flair/9161478.png" width="208" height="58" alt="profile for Yoel at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Yoel at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a>
+
+<a href="https://www.codewars.com/users/YOEL311">
+  <img src="https://www.codewars.com/users/YOEL311/badges/large" alt="enter image description here"></a>
+</a>
