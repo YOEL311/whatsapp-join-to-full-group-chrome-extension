@@ -9,7 +9,8 @@ WhatsApp Group Snooze Registration Try again and again to sign up for a full gro
 
 * [Quick Start](#quick-start)
 * [File Structure](#file-structure)
-* [Article](#Article)
+* [How It Works](#how-it-works)
+* [Article](#article)
 * [Technical Support or Questions](#technical-support-or-questions)
 * [Social Media](#social-media)
 
@@ -23,7 +24,6 @@ WhatsApp Group Snooze Registration Try again and again to sign up for a full gro
 - Open Chrome => Go to settings => Extension => Toggle Developer mode on => Click on Load unpacked => select the cloned directory.
 `Poof You have Succefully installed this extension!`:smile:
 ### How-To-Use
-
 
 ## File Structure
 Within the download you'll find the following directories and files:
@@ -44,6 +44,11 @@ WhatsApp-Group-Snooze-Registration/
 └── manifest.json
 
 ```
+
+## How It Works
+Flowchart
+![flow extension joinup WhatsApp Group (1)](https://user-images.githubusercontent.com/39925212/102887935-7bd46b80-4460-11eb-8145-12e7f7a02450.png)
+
 
 ## Article
 If you need a thorough explanation about the project you can visit and review [this article]
