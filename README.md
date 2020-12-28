@@ -18,7 +18,7 @@ WhatsApp Group Snooze Registration Try again and again to sign up for a full gro
 
 ## Quick start
 ### Git-Clone
-- Clone the Project: `$ git clone https://github.com/YOEL311/WhatsApp-Group-Snooze-Registration.git`.
+- Clone the Project: `$ git clone https://github.com/YOEL311/whatsapp-join-to-group-chrome-extension.git`.
 - Either clone it using above command or simply download zip & extract to your desired directory.
 ### Installation
 - Open Chrome => Go to settings => Extension => Toggle Developer mode on => Click on Load unpacked => select the cloned directory.
