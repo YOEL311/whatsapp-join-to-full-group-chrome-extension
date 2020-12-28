@@ -62,6 +62,8 @@ If you have questions or need help integrating the product, [contact me](https:/
 
 ## Social Media
 
+Linkedin: <https://www.linkedin.com/in/yoel-naki>
+
 Dev: <https://dev.to/yoel>
 
 Medium: <https://medium.com/@yoel301>
