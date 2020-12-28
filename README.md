@@ -62,7 +62,7 @@ If you have questions or need help integrating the product, [contact me](https:/
 
 ## Social Media
 
-Linkedin: <https://www.linkedin.com/in/yoel-naki>
+Linkedin: <https://www.linkedin.com/in/yoel-naki-86896a186/>
 
 Dev: <https://dev.to/yoel>
 
