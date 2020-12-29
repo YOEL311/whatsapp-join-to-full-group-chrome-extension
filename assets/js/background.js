@@ -3,18 +3,16 @@ chrome.extension.onMessage.addListener((request, sender, sendResponse) => {
   switch (request.action) {
     case "startAction":
       sendResponse({ received: "success" });
-      chrome.alarms.clear("startAction");
       startAction();
       break;
     case "successToJoin":
       sendResponse({ received: "success" });
-      chrome.alarms.clear("start");
+      chrome.alarms.clear("startAction");
       sendNotificationSuccess();
       break;
     case "groupFull": {
       sendResponse({ received: "success" });
-      console.log("full send alarm");
-      chrome.alarms.create("startAction", { delayInMinutes: 0.3 });
+      chrome.alarms.create("startAction", { delayInMinutes: 15 });
       break;
     }
     case "alreadyJoined":
@@ -26,13 +24,13 @@ chrome.extension.onMessage.addListener((request, sender, sendResponse) => {
 
 chrome.alarms.onAlarm.addListener((alarm) => {
   if (alarm.name === "startAction") {
+    chrome.alarms.clear("startAction");
     startAction();
   }
 });
 
 //actions
 const startAction = async () => {
-  console.log("start start");
   const url = await getFromLocal("URLGroup");
   const id = await hasTab;
   if (id) updateTabEndExact(id, url);
@@ -83,7 +81,7 @@ const hasTab = new Promise((resolve) => {
 const sendNotificationSuccess = () => {
   chrome.notifications.create("successToJoin", {
     type: "basic",
-    iconUrl: "assets/js/icons/icon.png",
+    iconUrl: "assets/icons/icon.png",
     title: "success to join",
     message: "You have successfully joined the group!",
   });

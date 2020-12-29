@@ -1,10 +1,11 @@
 {
     "manifest_version": 2,
-    "name": "WhatsApp Group Snooze Registration",
-    "description": "Try again and again to sign up for a full group until a space becomes available",
-    "version": "1.0",
+    "name": "WhatsApp join to full group",
+    "description": "When the group is full, Trying to join again every 15 minutes",
+    "version": "1.2",
     "browser_action": {
-        "default_popup": "popup.html"
+        "default_popup": "popup.html",
+        "default_icon": "assets/icons/group-task.png"
     },
     "permissions": [
         "alarms",

@@ -13,6 +13,8 @@ chrome.extension.onMessage.addListener((request, sender, sendResponse) => {
     case "checkIsUserWriting":
       checkIsUserWriting(sendResponse);
       break;
+    default:
+      break;
   }
 });
 
@@ -27,7 +29,7 @@ const openGroupLink = async (sendResponse) => {
 
 const tryToJoin = async () => {
   const buttonJoin = await awaitToElement(buttonToJoinSelector);
-  
+
   if (!buttonJoin) {
     sendMassage("alreadyJoined");
     return;
@@ -46,12 +48,6 @@ const tryToJoin = async () => {
     clickOnElement(finishButtonSelector);
     return;
   }
-
-  // const massageBox = await awaitToElement(messageBoxSelector);
-  // if (massageBox) {
-  //   sendMassage("successToJoin");
-  //   return;
-  // }
 };
 
 const checkIsUserWriting = (sendResponse) => {

@@ -1,0 +1,55 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #285b5c;
+    color: white;
+}
+
+h1 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 10px;
+    border-radius: 20px;
+    color: white;
+    background-color: #25d366;
+}
+
+.container {
+    opacity: 0.8;
+    width: 90%;
+    color: white;
+    text-align: center;
+}
+
+textarea {
+    width: 250px;
+    height: 80px;
+    font-size: 14px;
+    background-color: white;
+    color: #285b5c;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+#validation {
+    visibility: hidden;
+    min-width: 50px;
+    margin: auto;
+    background-color: #333;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 2px;
+    padding: auto;
+    position: fixed;
+    z-index: 1;
+    left: 20%;
+    top: 80px;
+    font-size: 17px;
+}
+
+#validation.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
