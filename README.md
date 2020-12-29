@@ -9,7 +9,8 @@ WhatsApp Group Snooze Registration Try again and again to sign up for a full gro
 
 * [Quick Start](#quick-start)
 * [File Structure](#file-structure)
-* [Article](#Article)
+* [How It Works](#how-it-works)
+* [Article](#article)
 * [Technical Support or Questions](#technical-support-or-questions)
 * [Social Media](#social-media)
 
@@ -17,13 +18,12 @@ WhatsApp Group Snooze Registration Try again and again to sign up for a full gro
 
 ## Quick start
 ### Git-Clone
-- Clone the Project: `$ git clone https://github.com/YOEL311/WhatsApp-Group-Snooze-Registration.git`.
+- Clone the Project: `$ git clone https://github.com/YOEL311/whatsapp-join-to-group-chrome-extension.git`.
 - Either clone it using above command or simply download zip & extract to your desired directory.
 ### Installation
 - Open Chrome => Go to settings => Extension => Toggle Developer mode on => Click on Load unpacked => select the cloned directory.
 `Poof You have Succefully installed this extension!`:smile:
 ### How-To-Use
-
 
 ## File Structure
 Within the download you'll find the following directories and files:
@@ -45,6 +45,11 @@ WhatsApp-Group-Snooze-Registration/
 
 ```
 
+## How It Works
+Flowchart
+![flow extension joinup WhatsApp Group (1)](https://user-images.githubusercontent.com/39925212/102887935-7bd46b80-4460-11eb-8145-12e7f7a02450.png)
+
+
 ## Article
 If you need a thorough explanation about the project you can visit and review [this article]
 
@@ -57,14 +62,18 @@ If you have questions or need help integrating the product, [contact me](https:/
 
 ## Social Media
 
-
-
-<a href="https://www.codewars.com/users/YOEL311">
-  <img src="https://www.codewars.com/users/YOEL311/badges/micro" alt="enter image description here"></a>
-</a>
+Linkedin: <https://www.linkedin.com/in/yoel-naki-86896a186/>
 
 Dev: <https://dev.to/yoel>
 
 Medium: <https://medium.com/@yoel301>
 
 Whatsapp: <https://api.whatsapp.com/send?phone=972548475559>
+
+## My reputation
+
+<a href="https://stackoverflow.com/users/9161478/yoel"><img src="https://stackoverflow.com/users/flair/9161478.png" width="208" height="58" alt="profile for Yoel at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Yoel at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a>
+
+<a href="https://www.codewars.com/users/YOEL311">
+  <img src="https://www.codewars.com/users/YOEL311/badges/micro" alt="enter image description here"></a>
+</a>
