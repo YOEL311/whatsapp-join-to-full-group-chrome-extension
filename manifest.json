@@ -5,7 +5,7 @@
     "version": "1.2",
     "browser_action": {
         "default_popup": "popup.html",
-        "default_icon": "assets/icons/group-task.png"
+        "default_icon": "assets/icons/icon.png"
     },
     "permissions": [
         "alarms",

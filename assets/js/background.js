@@ -44,10 +44,8 @@ const createTabEndExact = (url) => {
 };
 
 const getFromLocal = (key) =>
-  new Promise(function (resolve, reject) {
-    chrome.storage.sync.get([key], function (options) {
-      resolve(options[key]);
-    });
+  new Promise((resolve, reject) => {
+    chrome.storage.sync.get([key], (options) => resolve(options[key]));
   });
 
 const updateTabEndExact = async (tabId, url) => {
