@@ -4,6 +4,7 @@ WhatsApp Group Snooze Registration Try again and again to sign up for a full gro
 ![version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 [![Profile](https://img.shields.io/badge/Linkedin-YoelNaki-blue)](https://www.linkedin.com/in/yoel-naki-86896a186)
  
+![Product Gif](assets/icons/joinToGroup.gif) 
 
 ## Table of Contents
 
@@ -47,7 +48,7 @@ WhatsApp-Group-Snooze-Registration/
 
 ## How It Works
 Flowchart
-![flow extension joinup WhatsApp Group (1)](https://user-images.githubusercontent.com/39925212/102887935-7bd46b80-4460-11eb-8145-12e7f7a02450.png)
+![flow extension joinup WhatsApp Group](assets/icons/flowChart.png)
 
 
 ## Article
