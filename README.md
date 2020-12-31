@@ -1,4 +1,4 @@
-# whatsapp-join-to-group-chrome-extension
+# whatsapp-join-to-full-group-chrome-extension
 WhatsApp Group Snooze Registration Try again and again to sign up for a full group until a space becomes available
 
 ![version](https://img.shields.io/badge/version-1.0.0-blue.svg)
