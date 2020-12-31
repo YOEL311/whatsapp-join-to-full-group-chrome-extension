@@ -25,6 +25,8 @@ WhatsApp Group Snooze Registration Try again and again to sign up for a full gro
 - Open Chrome => Go to settings => Extension => Toggle Developer mode on => Click on Load unpacked => select the cloned directory.
 `Poof You have Succefully installed this extension!`:smile:
 ### How-To-Use
+- Login in Whatsapp web.
+- Open extension => Input url group invitation  => Click join
 
 ## File Structure
 Within the download you'll find the following directories and files:
