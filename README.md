@@ -4,7 +4,7 @@ WhatsApp Group Snooze Registration Try again and again to sign up for a full gro
 ![version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 [![Profile](https://img.shields.io/badge/Linkedin-YoelNaki-blue)](https://www.linkedin.com/in/yoel-naki-86896a186)
  
-![Product Gif](assets/icons/flowChart.png) 
+![Product Gif](assets/icons/joinToGroup.gif) 
 
 ## Table of Contents
 
