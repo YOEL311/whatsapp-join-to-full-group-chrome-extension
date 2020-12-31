@@ -1,9 +1,8 @@
 # whatsapp-join-to-full-group-chrome-extension
 WhatsApp Group Snooze Registration Try again and again to sign up for a full group until a space becomes available
 
-![version](https://img.shields.io/badge/version-1.0.0-blue.svg)
-
-
+![version](https://img.shields.io/badge/version-1.0.0-blue.svg) [![Profile](https://img.shields.io/badge/Linkedin-akashpawara-blue)](https://www.linkedin.com/in/yoel-naki-86896a186)
+ 
 
 ## Table of Contents
 
@@ -18,7 +17,7 @@ WhatsApp Group Snooze Registration Try again and again to sign up for a full gro
 
 ## Quick start
 ### Git-Clone
-- Clone the Project: `$ git clone https://github.com/YOEL311/whatsapp-join-to-group-chrome-extension.git`.
+- Clone the Project: `$ git clone https://github.com/YOEL311/whatsapp-join-to-full-group-chrome-extension.git`.
 - Either clone it using above command or simply download zip & extract to your desired directory.
 ### Installation
 - Open Chrome => Go to settings => Extension => Toggle Developer mode on => Click on Load unpacked => select the cloned directory.
