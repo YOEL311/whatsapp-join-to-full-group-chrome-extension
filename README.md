@@ -11,7 +11,6 @@ WhatsApp Group Snooze Registration Try again and again to sign up for a full gro
 * [Quick Start](#quick-start)
 * [File Structure](#file-structure)
 * [How It Works](#how-it-works)
-* [Article](#article)
 * [Technical Support or Questions](#technical-support-or-questions)
 * [Social Media](#social-media)
 
@@ -32,7 +31,7 @@ WhatsApp Group Snooze Registration Try again and again to sign up for a full gro
 Within the download you'll find the following directories and files:
 
 ```
-WhatsApp-Group-Snooze-Registration/
+whatsapp-join-to-full-group-chrome-extension/
 ├── README.md
 ├── assets
 │   ├── css
@@ -51,10 +50,6 @@ WhatsApp-Group-Snooze-Registration/
 ## How It Works
 Flowchart
 ![flow extension joinup WhatsApp Group](assets/icons/flowChart.png)
-
-
-## Article
-If you need a thorough explanation about the project you can visit and review [this article]
 
 
 ## Technical Support or Questions
