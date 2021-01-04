@@ -3,6 +3,8 @@ WhatsApp Group Snooze Registration Try again and again to sign up for a full gro
 
 ![version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 [![Profile](https://img.shields.io/badge/Linkedin-YoelNaki-blue)](https://www.linkedin.com/in/yoel-naki-86896a186)
+[![chrome web store](https://shields.io/badge/-chromeWebStore-red)](https://chrome.google.com/webstore/detail/whatsapp-join-to-full-gro/aalnhgolpbnnopmfbchloglegighlfed)
+
  
 ![Product Gif](assets/icons/joinToGroup.gif) 
 
@@ -11,13 +13,16 @@ WhatsApp Group Snooze Registration Try again and again to sign up for a full gro
 * [Quick Start](#quick-start)
 * [File Structure](#file-structure)
 * [How It Works](#how-it-works)
-* [Article](#article)
 * [Technical Support or Questions](#technical-support-or-questions)
 * [Social Media](#social-media)
 
 
 
 ## Quick start
+
+### from store
+You can take the extension from the [chrome web store](https://chrome.google.com/webstore/detail/whatsapp-join-to-full-gro/aalnhgolpbnnopmfbchloglegighlfed)
+
 ### Git-Clone
 - Clone the Project: `$ git clone https://github.com/YOEL311/whatsapp-join-to-full-group-chrome-extension.git`.
 - Either clone it using above command or simply download zip & extract to your desired directory.
@@ -32,7 +37,7 @@ WhatsApp Group Snooze Registration Try again and again to sign up for a full gro
 Within the download you'll find the following directories and files:
 
 ```
-WhatsApp-Group-Snooze-Registration/
+whatsapp-join-to-full-group-chrome-extension/
 ├── README.md
 ├── assets
 │   ├── css
@@ -51,10 +56,6 @@ WhatsApp-Group-Snooze-Registration/
 ## How It Works
 Flowchart
 ![flow extension joinup WhatsApp Group](assets/icons/flowChart.png)
-
-
-## Article
-If you need a thorough explanation about the project you can visit and review [this article]
 
 
 ## Technical Support or Questions
