@@ -21,7 +21,7 @@ WhatsApp Group Snooze Registration Try again and again to sign up for a full gro
 ## Quick start
 
 ### from store
-You can take the extension from the ![chrome web store](https://chrome.google.com/webstore/detail/whatsapp-join-to-full-gro/aalnhgolpbnnopmfbchloglegighlfed)
+You can take the extension from the [chrome web store](https://chrome.google.com/webstore/detail/whatsapp-join-to-full-gro/aalnhgolpbnnopmfbchloglegighlfed)
 
 ### Git-Clone
 - Clone the Project: `$ git clone https://github.com/YOEL311/whatsapp-join-to-full-group-chrome-extension.git`.
