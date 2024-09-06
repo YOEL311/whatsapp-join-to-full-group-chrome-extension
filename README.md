@@ -72,7 +72,6 @@ Dev: <https://dev.to/yoel>
 
 Medium: <https://medium.com/@yoel301>
 
-Whatsapp: <https://api.whatsapp.com/send?phone=972548475559>
 
 ## My reputation
 
