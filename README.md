@@ -60,7 +60,7 @@ Flowchart
 
 ## Technical Support or Questions
 
-If you have questions or need help integrating the product, [contact me](https://api.whatsapp.com/send?phone=972548475559) me on whatsapp or email me at (yoel301@mail.com).
+If you have questions or need help integrating the product, contact me by email at (yoel301@mail.com).
 
 
 
